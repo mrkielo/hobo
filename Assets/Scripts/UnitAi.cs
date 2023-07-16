@@ -29,25 +29,6 @@ public class UnitAi : MonoBehaviour
 		StartCoroutine(WaitForBuilding<ExtractionBuilding>());
 	}
 
-	void GotoExtraction()
-	{
-		destinationBuilding = unit.GetClosestBuilding<ExtractionBuilding>();
-		movement.Move(destinationBuilding.transform.position);
-	}
-
-	void GoToProduction()
-	{
-		destinationBuilding = unit.GetClosestBuilding<ProductionBuilding>();
-		movement.Move(destinationBuilding.transform.position);
-	}
-
-	void GoToWarehouse()
-	{
-		destinationBuilding = unit.GetClosestBuilding<Warehouse>();
-		movement.Move(destinationBuilding.transform.position);
-
-	}
-
 	void GoToBuilding<T>()
 	{
 		destinationBuilding = unit.GetClosestBuilding<T>();

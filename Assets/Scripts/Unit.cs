@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-
 	[SerializeField] int cap = 1;
-
 	GameResourcesList unitResourcesList;
 	[SerializeField] FloatingText floatingTextPrefab;
-
-	public bool hasDestination;
 
 	private void Start()
 	{
 		unitResourcesList = GetComponent<GameResourcesList>();
 	}
-
-
-
 
 	public GameResourcesList GetClosestBuilding<T>()
 	{
